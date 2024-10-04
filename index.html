@@ -1,40 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> HTML y JavaScript Diagnostico</title>
+    <title>Funko-Pop Store</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
-    <link rel="stylesheet" type="text/css" href="Diagnostico/style.css" />
+    <!--TIPOGRAFIAS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script defer src="slider.js"></script> <!-- El script se carga después del DOM -->
+
+    <link rel="icon" href="assets/icon.png" type="image/x-icon">
+
 </head>
 <body>
+    <img id="logo" src="assets/logo1.png" alt="img" />
 
-    <div id="container">
-        <h1>Welcome to the Quiz</h1>
-        <p id="question">What is the capital of France?</p>
-        <button class="button" onclick="checkAnswer()">Submit Answer</button>
+    <!-- Barra de navegación -->
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#who">QUIENES SOMOS</a></li>
+                <li><a href="#sales">PRODUCTOS</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider">
+            <img class="slide active" src="assets/slide0.png" alt="slide">
+            <img class="slide" src="assets/slide1.png" alt="slide2">
+            <img class="slide" src="assets/slide2.png" alt="slide3">
+            <img class="slide" src="assets/slide3.png" alt="slide4">
+            <img class="slide" src="assets/slide4.png" alt="slide5">
+        </div>
     </div>
 
-    <script>
-        /* Pregunta: ¿Cuál es la función de 'document.getElementById' en JavaScript? */
-        /*seleccionar un elemento por su ID*/
-        function checkAnswer() {
-            /* Pregunta: ¿Qué hace 'prompt' y cómo se puede usar en lugar de 'alert'? */
-            /*prompt genera una ventana emergente en donde puedes ingresar datos*/
-            let answer = prompt("Enter your answer:");
+<!-- Sección principal -->
+<section>
+    <h1>Pagina Principal</h1>
+    <div class="container">
+        <img id="pop" src="assets/pop.png" alt="Funko Pop">
+        <br>
+        <br>
+        <p id="parrafos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+        <p id="parrafos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+</section>
 
-            /* Pregunta: ¿Cuál es el propósito de la instrucción 'if' en este fragmento de código? */
-            /*generar una condición en donde si se cumple se genera la respuesta*/
-            if (answer.toLowerCase() === 'paris') {
-                alert("Correct!");
-            } else {
-                alert("Try again!");
-            }
-        }
+    <marquee>Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · </marquee>
 
-        /* Pregunta: ¿Cómo se puede manipular el DOM usando JavaScript para cambiar el contenido de un elemento? */
-        document.getElementById("question").innerText = "What is the capital of Spain?";
-    </script>
+    <!-- Sección Productos -->
+    <section id="galeriaP">
+        <h1 id="sales">Productos</h1>
+        <p id="parrafos">Esta sección contiene información sobre los productos</p>
+        <div class="galeria">
+            <div class="productos">
+                <img id="loki" src="assets/funko1.webp" alt="Funko Pop LOKI">
+                <h3>LOKI</h3>
+                <p>Funko Pop LOKI</p>
+                <p id="parrafos2">Marvel</p>
+                <input type="submit" value="Comprar">
+            </div>
 
+            <div class="productos">
+                <img id="tina" src="assets/funko2.png" alt="Funko Pop TinyTina">
+                <h3>TINY TINA</h3>
+                <p>Funko Pop TINY TINA</p>
+                <p>Borderlands</p>
+                <input type="submit" value="Comprar">
+            </div>
+
+            <div class="productos">
+                <img id="ironman" src="assets/funko3.png" alt="Funko Pop IRONMAN">
+                <h3>IRON MAN</h3>
+                <p>Funko Pop IRONMAN</p>
+                <p>Marvel</p>
+                <input type="submit" value="Comprar">
+            </div>
+
+            <div class="productos">
+                <img id="kiriko" src="assets/funko5.png" alt="Funko Pop KIRIKO">
+                <h3>KIRIKO</h3>
+                <p>Funko Pop KIRIKO</p>
+                <p>Overwatch</p>
+                <input type="submit" value="Comprar">
+            </div>
+
+            <div class="productos">
+                <img id="zoro" src="assets/funko7.webp" alt="Funko Pop ZORO">
+                <h3>ZORO</h3>
+                <p>Funko Pop ZORO</p>
+                <p>One Piece</p>
+                <input type="submit" value="Comprar">
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <marquee>Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · Funko-pop · </marquee>
+
+    <!-- Sección "Quienes somos" -->
+    <section id="who">
+        <h2>Quienes somos</h2>
+        <ul>
+            <li>Tienda en linea Funko.</li>
+            <br>
+            <li>Venta de FunkoPops.</li>
+            <br>
+            <li>Envio rapido y seguro.</li>
+        </ul>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section>
+        <h2>Contacto</h2>
+        <form action="#" method="post" id="formulario">
+            <div id="form">
+                <label for="name">Ingresa tu nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Ingresa tu correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Ingresa un mensaje:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                <br>
+                <input id="boton1" type="submit" value="Enviar Formulario">
+            </div>
+        </form>
+    </section>
 </body>
 </html>
